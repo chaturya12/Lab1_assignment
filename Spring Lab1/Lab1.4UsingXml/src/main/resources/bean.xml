@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+<bean id="employee1" class="com.cg.anno.Employee">
+
+<property name="empId"><value>100</value></property>
+<property name="empName"><value>chatu</value></property>
+<property name="salary"><value>10000</value></property>
+<property  name="age"><value>21</value></property>
+</bean>
+<bean id="employee2" class="com.cg.anno.Employee">
+
+<property name="empId"><value>101</value></property>
+<property name="empName"><value>dilli</value></property>
+<property name="salary"><value>10200</value></property>
+<property name="age"><value>22</value></property>
+
+
+</bean>
+<bean id="sbu" class="com.cg.anno.Sbu">
+<property name="sbuId"><value>101</value></property>
+<property name="sbuName"><value>productService</value></property>
+<property name="sbuHead"><value>kavya</value></property>
+<property name="empList" >
+   <list>
+   <ref bean="employee1"/>
+   <ref bean="employee2"/>   
+   </list>
+
+</property>
+</bean>
+
+</beans>
